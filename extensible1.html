@@ -1,0 +1,57 @@
+DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function User(name,id) {
+            this.name = name;
+            this.id = id;
+        }
+        var u1 =  new User();
+        u1.name= "sunitha";
+        u1.id= 34;
+        //isextensible
+        Object.isExtensible(u1);
+        u1.text="testing is extensible";
+        console.log(u1);
+        //prevent extensions
+        Object.preventExtensions(u1);
+        u1.location="cupertino";
+        console.log(u1.location);
+        console.log(u1);
+
+        //seal: add and deleting the property
+        function Car(model,year){
+            this.model=model;
+            this.year=year;
+        }
+        var Camry = new Car("camry",2014);
+        console.log(Camry);
+        //seal method
+        Object.seal(Camry);
+        Camry.color = 'red';
+        console.log(Camry);
+        console.log(Object.isSealed(Camry));
+
+        //freeze
+        var T1 = new Car("civic",2014);
+        if(console.log(Object.isFrozen(T1))== false) {
+            T1.test = "testing freeze";
+            console.log(T1)
+        }
+            else
+        {
+            //Freeze method
+            Object.freeze(T1);
+        T1.test1 = "testing freeze";
+        console.log(T1);
+        }
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

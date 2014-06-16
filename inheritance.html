@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+       Object.prototype._name= " sunitha";
+
+        function Person(){
+           this._name= " test1";
+       };
+
+       Person.prototype._name= "sindu";
+
+
+       var p = new Person();
+
+       var q = Object.create(p);
+      // console.log(q);
+
+       var x =  Object.create(Person);
+
+       console.log(x._name);
+       //console.log(Object.name);
+       var obj = {
+           name: 'Shilpa',
+           id: 32,
+           phone: '408-222-8213'
+       };
+
+       var obj2 = Object.create(obj);
+
+       obj.name = 'Jyotika';
+       obj.id = 64;
+       obj.loginType = 'customer';
+
+       console.log('obj2 is ');
+       console.log(obj);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

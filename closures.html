@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function closure(){
+            var x=100;
+            return function(y){
+                console.log(x+y);
+            };
+        }
+
+        /*var input = new closure();
+        input.x=200;*/
+
+        closure()(100);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

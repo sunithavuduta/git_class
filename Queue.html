@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        Queue.prototype.enqueue = function (elem) {
+            this.data.push(elem);
+        };
+        Queue.prototype.dequeue = function () {
+            return this.data.shift();
+        };
+
+        Queue.prototype.peek = function (){
+            /*if (myq.data == 0){
+                return this.data[0];
+            }*/
+            return this.data[0];
+        };
+
+        function Queue(){
+            this.data = [];
+        }
+
+
+
+        Queue.prototype.userData = function (input){
+            for(var count=0;count<= 10;count++) {
+               input.data.push(count);
+
+            }
+            console.log("deq"+ input.dequeue());
+            return input;
+        };
+
+        var myq = Queue.prototype.userData(new Queue());
+        console.log(myq.data);
+        console.log(myq.peek());
+
+
+        //console.log(myq.dequeue());
+        //console.log(myq.data);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

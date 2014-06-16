@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        function Stack() {
+            this.data = new Array();
+
+        };
+
+
+        Stack.prototype.size = function () {
+            alert('im in size')
+            return this.data.length;
+        };
+
+        var stack1 = new Stack();
+        alert(stack1.size());
+    </script>
+</head>
+<body>
+
+</body>
+</html>

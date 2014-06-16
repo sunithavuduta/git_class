@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+        function concatenate(){
+            console.log(arguments);
+            /*var str='';
+            for(var i=0;i< arguments.length;i++){
+            str+= arguments[i]+' ';
+        }
+        return str.trim();*/
+            var str = Array.prototype.reduce.call(arguments,function(old_val,new_val) {
+                return old_val +" "+new_val
+            });
+        }
+
+        var cString=concatenate('a','b','c');
+        console.log(cString);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+         function Stack() {
+            this.data = new Array();
+            return this;
+
+        };
+
+        Stack.prototype.size = function () {
+            return this.data.length;
+
+        };
+
+
+         Stack.prototype.empty = function() {
+            return this.size() == 0 ;
+
+        };
+
+         Stack.prototype.push = function(a) {
+            return this.data.push(a);
+
+
+        };
+
+         Stack.prototype.peek = function() {
+            if (this.empty() == false){
+                return this.data[this.size() - 1];
+
+            }
+            return null;
+
+        };
+         Stack.prototype.pop = function() {
+             alert(">>>"+this.empty()+"<<<<");
+            if (this.empty() == false) {
+                return this.data.pop();
+            } else {
+                return null;
+            }
+        };
+
+
+        var s = new Stack();
+        s.push(1);
+        s.push(2);
+        s.push(3);
+         console.log(s.push("abc"));
+         console.log(s.size());
+         console.log(s.pop());
+         console.log(s.size());
+         console.log(s.peek());
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
